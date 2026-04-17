@@ -129,11 +129,11 @@ export default function Index() {
                   </a>
                 </div>
               </div>
-              <div className="relative hidden md:block">
+              <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl opacity-20 blur-3xl"></div>
                 <div className="relative">
                   {/* Profile Image */}
-                  <div className="relative w-full aspect-square max-w-md mx-auto">
+                  <div className="relative w-full aspect-square max-w-sm md:max-w-md mx-auto">
                     {/* Image */}
                     <img 
                       src="/profile.jpg" 

@@ -93,8 +93,8 @@ export default function Index() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
           <div className="max-w-6xl mx-auto w-full">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8">
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8 order-1">
                 <div>
                   <div className="inline-block mb-4">
                     <span className="px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold border border-blue-500/30">
@@ -108,6 +108,28 @@ export default function Index() {
                     I transform ideas into stunning, functional digital products. With 2+ years of experience in full-stack development, I create solutions that are beautiful, performant, and user-focused.
                   </p>
                 </div>
+              </div>
+              
+              <div className="relative order-2 md:order-3">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl opacity-20 blur-3xl"></div>
+                <div className="relative">
+                  {/* Profile Image */}
+                  <div className="relative w-full aspect-square max-w-sm md:max-w-md mx-auto">
+                    {/* Image */}
+                    <img 
+                      src="/profile.jpg" 
+                      alt="Gyan Daniel Nana Yaw" 
+                      className="relative w-full h-full object-cover rounded-2xl border-2 border-blue-500/40 shadow-2xl shadow-blue-500/30"
+                    />
+                    
+                    {/* Decorative glowing elements */}
+                    <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl opacity-30 blur-2xl"></div>
+                    <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full opacity-30 blur-2xl"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4 order-3 md:order-2 md:col-span-2">
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link to="/contact" className="px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all inline-flex items-center justify-center gap-2">
                     Start a Project
@@ -127,24 +149,6 @@ export default function Index() {
                   <a href="mailto:gyandaniel599@gmail.com" className="p-3 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-blue-500 hover:text-blue-400 hover:bg-slate-800 transition-all text-slate-300">
                     <Mail className="w-5 h-5" />
                   </a>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl opacity-20 blur-3xl"></div>
-                <div className="relative">
-                  {/* Profile Image */}
-                  <div className="relative w-full aspect-square max-w-sm md:max-w-md mx-auto">
-                    {/* Image */}
-                    <img 
-                      src="/profile.jpg" 
-                      alt="Gyan Daniel Nana Yaw" 
-                      className="relative w-full h-full object-cover rounded-2xl border-2 border-blue-500/40 shadow-2xl shadow-blue-500/30"
-                    />
-                    
-                    {/* Decorative glowing elements */}
-                    <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl opacity-30 blur-2xl"></div>
-                    <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full opacity-30 blur-2xl"></div>
-                  </div>
                 </div>
               </div>
             </div>

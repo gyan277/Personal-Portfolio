@@ -61,7 +61,7 @@ export default function About() {
               <div>
                 <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
                 <p className="text-slate-300 text-lg leading-relaxed mb-4">
-                  I'm Gyan Daniel Nana Yaw, A computer Engineering Student in Kwame Nkrumah University of Science and Technology, a passionate full-stack developer with a keen eye for design and a commitment to clean, maintainable code. I specialize in creating web applications that not only look great but also deliver exceptional user experiences.
+                  I'm Gyan Daniel Nana Yaw, A computer Engineering Student in Kwame Nkrumah University of Science and Technology, a passionate full-stack developer with a keen eye for design and a commitment to clean, maintainable code. I specialize in creating software applications both web and mobile apps that not only look great but also deliver exceptional user experiences.
                 </p>
                 <p className="text-slate-300 text-lg leading-relaxed">
                   Over the past 2 years, I've had the privilege of working with startups and established companies, helping them bring their visions to life through cutting-edge technology and thoughtful design.

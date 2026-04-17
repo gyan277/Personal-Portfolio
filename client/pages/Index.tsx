@@ -63,7 +63,7 @@ export default function Index() {
         <header className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50 z-50 shadow-lg">
           <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
             <Link to="/" className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Gyan Daniel
+              Gyan Daniel Nana Yaw
             </Link>
             <div className="hidden md:flex gap-8 items-center">
               <Link to="/" className="text-sm font-medium text-blue-400 transition-colors">

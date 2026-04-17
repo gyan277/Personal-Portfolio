@@ -106,6 +106,11 @@
   body {
     @apply bg-background text-foreground;
     position: relative;
+    overflow-x: hidden;
+  }
+
+  html {
+    overflow-x: hidden;
   }
 
   body::before {
@@ -159,5 +164,12 @@
   code {
     overflow-x: auto;
     white-space: pre;
+  }
+
+  /* Mobile-specific fixes */
+  @media (max-width: 768px) {
+    body::after {
+      font-size: 10px;
+    }
   }
 }

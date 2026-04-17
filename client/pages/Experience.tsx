@@ -12,7 +12,7 @@ export default function Experience() {
       title: "IT Support Specialist (Intern)",
       company: "Mount Olivet Methodist Academy",
       period: "2025-2026",
-      description: "Built and maintained multiple SaaS platforms, implemented payment integrations, and optimized database queries.",
+      description: "As an IT Support Specialist, I provided technical assistance and support to ensure seamless technology integration in educational settings. My roles involved troubleshooting, maintenance, and training to empower students, teachers, and staff in leveraging technology for learning and productivity.",
     },
     {
       title: "Graphic Designer",

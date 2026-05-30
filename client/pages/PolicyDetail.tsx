@@ -51,8 +51,13 @@ export default function PolicyDetail() {
     setShowLangPicker(false);
     if (l === 'en') { setTranslatedText(''); return; }
     setTranslating(true);
-    const result = await translateText(policy.full_text, l, 'civic policy');
-    setTranslatedText(result);
+    try {
+      const result = await translateText(policy.full_text, l, 'civic policy');
+      setTranslatedText(result);
+    } catch (e) {
+      console.error('Translation failed:', e);
+      setTranslatedText(policy.full_text);
+    }
     setTranslating(false);
   };
 
@@ -160,9 +165,12 @@ export default function PolicyDetail() {
           )}
 
           {translating ? (
-            <div className="flex items-center gap-2 py-4 justify-center">
-              <Loader className="w-4 h-4 text-green-600 animate-spin" />
-              <span className="text-sm text-gray-500">Translating with AI...</span>
+            <div className="flex flex-col items-center gap-3 py-6">
+              <div className="w-10 h-10 border-4 border-green-100 border-t-green-600 rounded-full animate-spin" />
+              <div className="text-center">
+                <p className="text-sm font-semibold text-gray-700">Translating to {LANGUAGES[lang]}...</p>
+                <p className="text-xs text-gray-400 mt-0.5">Powered by Claude AI</p>
+              </div>
             </div>
           ) : (
             <p className="text-sm text-gray-600 leading-relaxed whitespace-pre-line">

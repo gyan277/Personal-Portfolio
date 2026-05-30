@@ -2,7 +2,8 @@ import { useAuth } from '../context/AuthContext';
 import Layout from '../components/Layout';
 import NewsSection from '../components/NewsSection';
 import { Link } from 'react-router-dom';
-import { FileText, MessageSquare, TrendingUp, Users, ChevronRight, Bell, Zap, CheckCircle, Scale, Building2, UserCheck, MapPin, ArrowRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { FileText, MessageSquare, TrendingUp, Users, ChevronRight, Bell, Zap, CheckCircle, Scale, Building2, UserCheck, MapPin, ArrowRight, Sparkles } from 'lucide-react';
 
 const METRICS = [
   { label: 'Active Policies', value: '24', icon: FileText, bg: 'bg-green-50', color: 'text-green-700', border: 'border-green-100' },
@@ -233,6 +234,25 @@ export default function Home() {
       </div>
 
       <NewsSection />
+
+      {/* Floating AI Constitution Button */}
+      <div className="fixed bottom-24 right-4 z-40 flex flex-col items-end gap-2">
+        {/* Tooltip */}
+        <div className="bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-xl shadow-lg animate-fade-in">
+          Ask about the Constitution
+          <div className="absolute bottom-0 right-4 translate-y-full w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900" />
+        </div>
+        {/* FAB */}
+        <Link
+          to="/constitution"
+          className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-xl active:scale-95 transition-transform relative"
+          style={{ background: 'linear-gradient(135deg, #005C35 0%, #FCD116 100%)' }}
+        >
+          <Sparkles className="w-6 h-6 text-white" />
+          {/* Pulse ring */}
+          <span className="absolute inset-0 rounded-2xl animate-ping opacity-20 bg-green-500" />
+        </Link>
+      </div>
     </Layout>
   );
 }

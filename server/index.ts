@@ -4,6 +4,7 @@ import cors from "cors";
 import { handleDemo } from "./routes/demo";
 import { handleTranslate, handleSimplify } from "./routes/claude";
 import { handleVerifyCard } from "./routes/verifyCard";
+import { handleConstitution } from "./routes/constitution";
 
 export function createServer() {
   const app = express();
@@ -25,6 +26,7 @@ export function createServer() {
   app.post("/api/translate", handleTranslate);
   app.post("/api/simplify", handleSimplify);
   app.post("/api/verify-card", handleVerifyCard);
+  app.post("/api/constitution", handleConstitution);
 
   return app;
 }

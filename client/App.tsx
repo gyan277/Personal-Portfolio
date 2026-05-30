@@ -14,6 +14,7 @@ import PolicyDetail from "./pages/PolicyDetail";
 import Forums from "./pages/Forums";
 import ForumThread from "./pages/ForumThread";
 import Profile from "./pages/Profile";
+import Admin from "./pages/Admin";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +51,7 @@ function AppRoutes() {
         <Route path="/forums" element={<ProtectedRoute><Forums /></ProtectedRoute>} />
         <Route path="/forums/:id" element={<ProtectedRoute><ForumThread /></ProtectedRoute>} />
         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+        <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
         <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </BrowserRouter>

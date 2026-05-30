@@ -1,7 +1,7 @@
 import Layout from '../components/Layout';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import { Shield, LogOut, ChevronRight, Bell, Globe, Lock, HelpCircle, Star, CheckCircle, Edit3, Scale, Building2, UserCheck } from 'lucide-react';
+import { Shield, LogOut, ChevronRight, Bell, Globe, Lock, HelpCircle, Star, CheckCircle, Edit3, Scale, Building2, UserCheck, LayoutDashboard } from 'lucide-react';
 import { useState } from 'react';
 import VerificationModal from '../components/VerificationModal';
 
@@ -132,6 +132,25 @@ export default function Profile() {
           </div>
         </div>
       ))}
+
+      {/* Admin Panel Button - only for minister/assembly */}
+      {(profile?.role === 'minister' || profile?.role === 'assembly') && (
+        <div className="mx-4 mb-3">
+          <Link
+            to="/admin"
+            className="w-full flex items-center gap-3 py-4 px-4 ghana-gradient text-white font-bold rounded-3xl shadow-lg shadow-green-800/20 active:scale-[0.98] transition-transform"
+          >
+            <div className="w-8 h-8 bg-white/20 rounded-xl flex items-center justify-center">
+              <LayoutDashboard className="w-4 h-4 text-white" />
+            </div>
+            <div className="flex-1">
+              <p className="text-sm font-bold">Admin Dashboard</p>
+              <p className="text-white/70 text-xs">Manage policies, users & more</p>
+            </div>
+            <ChevronRight className="w-4 h-4 text-white/60" />
+          </Link>
+        </div>
+      )}
 
       {/* Sign Out */}
       <div className="mx-4 mb-4">

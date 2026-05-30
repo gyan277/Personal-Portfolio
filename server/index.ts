@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
+import { handleTranslate, handleSimplify } from "./routes/claude";
 
 export function createServer() {
   const app = express();
@@ -18,6 +19,10 @@ export function createServer() {
   });
 
   app.get("/api/demo", handleDemo);
+
+  // Claude AI routes
+  app.post("/api/translate", handleTranslate);
+  app.post("/api/simplify", handleSimplify);
 
   return app;
 }

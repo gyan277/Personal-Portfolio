@@ -1,175 +1,129 @@
-/** @import must precede all other statements */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  /**
-   * Tailwind CSS theme
-   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
-   * A different format will require also updating the theme in tailwind.config.ts.
-  */
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 98%;
     --foreground: 0 0% 10%;
-
     --card: 0 0% 100%;
     --card-foreground: 0 0% 10%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
-
-    --primary: 210 100% 50%;
+    --primary: 152 100% 21%;
     --primary-foreground: 0 0% 100%;
-
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 220 13% 90%;
-    --muted-foreground: 220 13% 45%;
-
-    --accent: 210 100% 50%;
+    --secondary: 45 100% 50%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 152 100% 21%;
     --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 210 100% 50%;
-
-    --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 0 0% 10%;
-
-    --sidebar-primary: 210 100% 50%;
-
-    --sidebar-primary-foreground: 0 0% 100%;
-
-    --sidebar-accent: 0 0% 15%;
-
-    --sidebar-accent-foreground: 0 0% 100%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 210 100% 50%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 152 100% 21%;
+    --radius: 1rem;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-    position: relative;
-    overflow-x: hidden;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
   }
 
   html {
-    overflow-x: hidden;
-  }
-
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    scroll-behavior: smooth;
     height: 100%;
-    z-index: -1;
-    background: 
-      linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-    opacity: 0.95;
   }
 
-  body::after {
-    content: 'const developer = { skills: ["React", "TypeScript", "Node.js"], passion: "building amazing products" }; function createMagic() { return innovation + dedication; } // Engineering excellence class Project { constructor(idea) { this.vision = idea; this.quality = "premium"; } build() { return this.vision.map(feature => feature.implement()); } } export default Project; import { creativity } from "mind"; const solution = await solve(problem); console.log("Dream. Code. Deploy."); let success = hardWork * smartWork; while(learning) { skills++; } if(challenge) { overcome(it); } const future = async () => { await build(tomorrow); }; ';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    z-index: -1;
-    font-family: 'Courier New', monospace;
-    font-size: 14px;
-    line-height: 1.8;
-    color: rgba(59, 130, 246, 0.15);
+  body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #e8f5e9;
+    height: 100%;
     overflow: hidden;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    padding: 2rem;
-    animation: scrollCode 120s linear infinite;
-    pointer-events: none;
   }
 
-  @keyframes scrollCode {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(-10%, -10%);
-    }
+  #root {
+    max-width: 480px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    background: #f8faf8;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
 
-  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #006B3F40; border-radius: 4px; }
+}
 
-  pre,
-  code {
-    overflow-x: auto;
-    white-space: pre;
+@layer utilities {
+  .ghana-gradient {
+    background: linear-gradient(145deg, #005C35 0%, #007A45 50%, #009B55 100%);
   }
+  .ghana-gradient-light {
+    background: linear-gradient(145deg, #e8f5e9 0%, #f1f8f1 100%);
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, #FCD116 0%, #F5A623 100%);
+  }
+  .card-shadow {
+    box-shadow: 0 2px 16px rgba(0, 107, 63, 0.06), 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .card-shadow-hover {
+    box-shadow: 0 8px 32px rgba(0, 107, 63, 0.12), 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .bottom-nav-shadow {
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.06);
+  }
+  .safe-bottom {
+    padding-bottom: max(env(safe-area-inset-bottom), 12px);
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, #005C35, #009B55);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .animate-slide-up {
+    animation: slideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
 
-  /* Mobile-specific fixes */
-  @media (max-width: 768px) {
-    body::after {
-      font-size: 10px;
-    }
-  }
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 107, 63, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(0, 107, 63, 0); }
 }
